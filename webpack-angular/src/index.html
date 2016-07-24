@@ -1,0 +1,12 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular App</title>
+  <base href="/">
+</head>
+<body ng-controller="HomeController as home">
+  <h1>Hello, {{home.name}}</h1>
+  <button class="btn btn-primary" ng-click="home.add()">Change</button>
+</body>
+</html>

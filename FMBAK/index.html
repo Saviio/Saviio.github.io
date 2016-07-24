@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fermi Components</title>
+  <base href="http://saviio.github.io/Fermi-UI">
+  <style>
+    #fermiTooltips > div > *{
+        margin-right: 30px;
+    }
+  </style>
+<link href="http://saviio.github.io/Fermi-UI/app.4db660b4dbe116ca1c5d.css" rel="stylesheet"></head>
+<body>
+    <div class="clearfix"> Hello, Fermi </div>
+    <div class="main" ng-controller="main">
+        <div ng-style="che()"></div>
+        <div id="breadcrumb">
+            <p>面包屑导航</p>
+            <fermi:breadcrumb items="['深夜面包房','法式长棍','巧克力可颂']"></fermi:breadcrumb>
+        </div>
+
+        <div id="fermischedule">
+            <p>日程表</p>
+            <fermi:schedule alias="events"></fermi:schedule>
+        </div>
+
+
+        <div id="fermiswitch">
+            <p>开关器</p>
+            <fermi:switch ng-model="item" ng-click="test(item)" fermi-default="true"></fermi:switch>
+            <fermi:switch ng-model="item" ng-click="test(item2)" fermi-default="false"></fermi:switch>
+        </div>
+
+        <div id="fermiTooltips">
+            <p>工具提示</p>
+            <div style="width:700px;margin:0 auto">
+                <fermi:tooltip content="Bottom" placement="bottom">
+                    <a href="http://www.baidu.com">向下看</a>
+                </fermi:tooltip>
+                <fermi:tooltip content="Top" placement="top">
+                    <a href="http://www.baidu.com">向上看</a>
+                </fermi:tooltip>
+                <fermi:tooltip content="Left" placement="left">
+                    <a href="http://www.baidu.com">向左看</a>
+                </fermi:tooltip>
+                <fermi:tooltip content="Right" placement="right">
+                    <a href="http://www.baidu.com">向右看</a>
+                </fermi:tooltip>
+            </div>
+        </div>
+
+        <div id="fermiProgress">
+            <p>Progress bar</p>
+            <div style="width:500px">
+                <fermi:lineprogress ng-model="entity1" fermi-default="0"></fermi:lineprogress>
+            </div>
+        </div>
+
+        <div id="fermiTab" style="padding:20px;width:700px">
+            <p>Tab</p>
+            <fermi:tabs>
+                <fermi:tab header="One">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </fermi:tab>
+                <fermi:tab header="Two">
+                    <div>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
+                </fermi:tab>
+                <fermi:tab header="Three" disable>
+                    <div>α β Σ</div>
+                </fermi:tab>
+            </fermi:tabs>
+        </div>
+    </div>
+<script src="http://saviio.github.io/Fermi-UI/app.4db660b4dbe116ca1c5d.js"></script></body>
+</html>
