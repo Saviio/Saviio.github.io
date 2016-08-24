@@ -22086,23 +22086,14 @@ webpackJsonp([2],{
 	})(Action || (Action = {}));
 	var reCharacter = /^$|^([a-zA-Z0-9\u4e00-\u9fa5_ -]+)$/;
 	var MenuListComponent = (function () {
-	    function MenuListComponent(ul) {
-	        this.ul = ul;
+	    function MenuListComponent() {
 	        this.currIndex = -1;
 	        this.action$ = new Subject_1.Subject();
 	        this.items = [];
 	        this.predicate = function (v, qs) { return true; };
 	        this.highlight = '';
 	        this.enter = new core_1.EventEmitter();
-	        //this.ul = el.nativeElement
 	    }
-	    Object.defineProperty(MenuListComponent.prototype, "activedIndex", {
-	        get: function () {
-	            return this.currIndex;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
 	    MenuListComponent.prototype.ngOnInit = function () {
 	        var _this = this;
 	        this.keyboardSubscription =
@@ -22140,11 +22131,6 @@ webpackJsonp([2],{
 	                _this.action$.next(action);
 	            })
 	                .subscribe();
-	        Observable_1.Observable.fromEvent(this.ul.nativeElement.firstChild, 'click')
-	            .do(function (event) {
-	            event.preventDefault();
-	        })
-	            .subscribe();
 	        /*console.log(this.ul.nativeElement)
 	        Observable.fromEvent(this.ul.nativeElement.firstChild, 'keyup')
 	          .do((event: KeyboardEvent) => {
@@ -22310,10 +22296,10 @@ webpackJsonp([2],{
 	            directives: [scroll_1.ScrollDirective],
 	            styles: [__webpack_require__(779)]
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_c = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _c) || Object])
+	        __metadata('design:paramtypes', [])
 	    ], MenuListComponent);
 	    return MenuListComponent;
-	    var _a, _b, _c;
+	    var _a, _b;
 	}());
 	exports.MenuListComponent = MenuListComponent;
 	
