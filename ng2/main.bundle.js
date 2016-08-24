@@ -22142,11 +22142,9 @@ webpackJsonp([2],{
 	                .subscribe();
 	        Observable_1.Observable.fromEvent(this.ul.nativeElement.firstChild, 'click')
 	            .do(function (event) {
-	            debugger;
 	            event.preventDefault();
 	        })
 	            .subscribe();
-	        debugger;
 	        /*console.log(this.ul.nativeElement)
 	        Observable.fromEvent(this.ul.nativeElement.firstChild, 'keyup')
 	          .do((event: KeyboardEvent) => {
@@ -22174,18 +22172,14 @@ webpackJsonp([2],{
 	        console.log(this.initialQuery)
 
 	        if(this.initialQuery !== undefined){
-	          this.action$.next({ type:Action.Filter, payload: this.initialQuery }) // 为啥不行
+	          this.action$.next({ type:Action.Filter, payload: this.initialQuery }) // not worked
 	        }
 	        */
 	        /*
-	            option::=
-	                    hover 选中
-	                    actived 已选中
-	        */
-	        /*
-	          高亮状态 //这个用DOM操作来完成？
-	          鼠标悬浮 外部组件css控制
-	          选中状态 (由外部控制)
+	          options state ::=
+	                高亮状态 这个用Scroll Directive 通过DOM操作来完成？
+	                鼠标悬浮 (由外部控制）
+	                选中状态 (由外部控制)
 
 	          考虑下没有Input的case？
 	        */
@@ -22395,6 +22389,7 @@ webpackJsonp([2],{
 	            child.classList.add(this.highlight);
 	            siblings(child).forEach(function (item) { return item.classList.remove(_this.highlight); });
 	        }
+	        console.log(document.activeElement);
 	        this.scrollTo(this.el, to, 200);
 	    };
 	    ScrollDirective.prototype.scrollTo = function (element, to, duration) {
